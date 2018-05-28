@@ -29,7 +29,7 @@ class Params:
     weight_decay = 1e-4
     print_freq = 100
 
-    resume = ''  # set this to path of model to resume training
+    resume = 'temp'  # set this to path of model to resume training
     #resume = '/home/macaodha/Projects/inat2018/code/model_best.pth.tar'
     train_file = '../train2018.json'
     val_file = '../val2018.json'
@@ -56,8 +56,8 @@ def main():
     model = inception_v3(pretrained=True)
     model.fc = nn.Linear(2048, args.num_classes)
     model.aux_logits = False
-    #model = torch.nn.DataParallel(model).cuda()
-    model = model.cuda()
+    model = torch.nn.DataParallel(model).cuda()
+    # model = model.cuda()
 
     # define loss function (criterion) and optimizer
     criterion = nn.CrossEntropyLoss().cuda()
