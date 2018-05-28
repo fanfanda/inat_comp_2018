@@ -31,16 +31,16 @@ class Params:
 
     resume = ''  # set this to path of model to resume training
     #resume = '/home/macaodha/Projects/inat2018/code/model_best.pth.tar'
-    train_file = '/media/Storage_1/Datasets/inat2018/train2018.json'
-    val_file = '/media/Storage_1/Datasets/inat2018/val2018.json'
-    data_root = '/media/Storage_1/Datasets/inat2018/images/'
+    train_file = '../train2018.json'
+    val_file = '../val2018.json'
+    data_root = '../train_val2018'
 
     # set evaluate to True to run the test set
     evaluate = False
     save_preds = True
     op_file_name = 'inat2018_test_preds.csv' # submission file
     if evaluate == True:
-        val_file = '/media/Storage_1/Datasets/inat2018/test2018.json'
+        val_file = '../test2018.json'
 
 best_prec3 = 0.0  # store current best top 3
 
@@ -52,7 +52,7 @@ def main():
     # load pretrained model
     print("Using pre-trained inception_v3")
     # use this line if instead if you want to train another model
-    #model = models.__dict__[args.arch](pretrained=True)
+    # model = models.__dict__[args.arch](pretrained=True)
     model = inception_v3(pretrained=True)
     model.fc = nn.Linear(2048, args.num_classes)
     model.aux_logits = False
