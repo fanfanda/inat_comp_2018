@@ -33,7 +33,7 @@ class Params:
     #resume = '/home/macaodha/Projects/inat2018/code/model_best.pth.tar'
     train_file = '../train2018.json'
     val_file = '../val2018.json'
-    data_root = '../train_val2018'
+    data_root = '../'
 
     # set evaluate to True to run the test set
     evaluate = False
