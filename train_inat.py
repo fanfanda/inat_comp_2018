@@ -36,7 +36,7 @@ class Params:
     data_root = '../'
 
     # set evaluate to True to run the test set
-    evaluate = False
+    evaluate = True
     save_preds = True
     op_file_name = 'inat2018_test_preds.csv' # submission file
     if evaluate == True:
