@@ -32,7 +32,7 @@ class Params:
     resume = 'model_path/iNat_2018_InceptionV3.pth.tar'  # set this to path of model to resume training
     #resume = '/home/macaodha/Projects/inat2018/code/model_best.pth.tar'
     train_file = '../train2018.json'
-    val_file = '../val2018.json'
+    val_file = '../test2018.json'
     data_root = '../'
 
     # set evaluate to True to run the test set
