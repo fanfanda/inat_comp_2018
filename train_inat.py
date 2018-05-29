@@ -29,7 +29,7 @@ class Params:
     weight_decay = 1e-4
     print_freq = 100
 
-    resume = 'temp'  # set this to path of model to resume training
+    resume = 'model_path/iNat_2018_InceptionV3.pth.tar'  # set this to path of model to resume training
     #resume = '/home/macaodha/Projects/inat2018/code/model_best.pth.tar'
     train_file = '../train2018.json'
     val_file = '../val2018.json'
